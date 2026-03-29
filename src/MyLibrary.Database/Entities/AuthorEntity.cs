@@ -1,6 +1,6 @@
 namespace MyLibrary.Database.Entities;
 
-public class Author : EntityBase
+public class AuthorEntity : EntityBase
 {
     public string FirstName { get; set; }
     
