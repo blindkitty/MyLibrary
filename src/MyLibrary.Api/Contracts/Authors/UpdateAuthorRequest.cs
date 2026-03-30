@@ -1,0 +1,20 @@
+using Microsoft.AspNetCore.Mvc;
+
+namespace MyLibrary.Api.Contracts.Authors;
+
+public class UpdateAuthorRequest
+{
+    public int Id { get; set; }
+
+    public string FirstName { get; set; }
+
+    public string LastName { get; set; }
+
+    public string? SurName { get; set; }
+
+    public string? Biography { get; set; }
+
+    public DateTime BornedAt { get; set; }
+
+    public DateTime? DiedAt { get; set; }
+}
