@@ -5,17 +5,19 @@ Simple monolith web application <br>
 <br><br>
 
 # Getting started
-Run in this directory to build and run app
-```bash
-docker build -t mylibrary-api .
-```
+1. Create a local environment file from the example:
 
 ```bash
-docker run -d -p 8080:8080 \
-  --name mylibrary-container \
-  -e "ASPNETCORE_ENVIRONMENT=Development" \
-  -e "ConnectionStrings__DefaultConnection=YOUR_CONNECTION_STRING" \
-  mylibrary-api
+cp .env.example .env
 ```
-<br>
-After that, Swagger will be available at: http://localhost:8080/swagger
+
+2. Set your PostgreSQL connection string in `.env`.
+
+3. Build and run the application:
+
+```bash
+docker compose up --build
+```
+
+
+Swagger will be available at: http://localhost:8080/swagger
